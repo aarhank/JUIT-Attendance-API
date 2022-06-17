@@ -18,7 +18,7 @@ public class AttendanceController {
     }
 
     @GetMapping("/v1.0/attendance/{id}")
-    public Attendance getAttendance(@PathVariable("id") String attendanceId){
+    public List<Attendance> getAttendance(@PathVariable("id") String attendanceId){
         return attendanceRepository.getAttendanceById(attendanceId);
     }
 
@@ -31,6 +31,11 @@ public class AttendanceController {
     @GetMapping("/v1.0/allAttendance")
     public List<Attendance> getAllAttendance(){
         return attendanceRepository.findAll();
+    }
+
+    @GetMapping("/v1.0/AttendanceByRoll/{id}")
+    public List<Attendance> getAttendanceByRoll(@PathVariable("id") String rollNo){
+        return attendanceRepository.getAttendanceByRoll(rollNo);
     }
 
 }
