@@ -42,7 +42,7 @@ A Spring boot application to manage attendance, database used dynamodb.
   
 
 * ```/v1.0/attendance/{id}```   
-  Deletes the attendance data by Id.
+  Fetch the attendance details by subjectId.
   
 
 * ```/v1.0/attendanceByRoll/{rollNo}```   
